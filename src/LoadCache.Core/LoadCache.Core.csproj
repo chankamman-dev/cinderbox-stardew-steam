@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Compiled against the .NET 10 assemblies taken out of Cinderbox's APK (see SteamPresence.Core). -->
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <NoStdLib>true</NoStdLib>
+    <NoCompilerStandardLib>true</NoCompilerStandardLib>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>12</LangVersion>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <NoWarn>CA1416</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Private.CoreLib"><HintPath>$(AsmDir)/System.Private.CoreLib.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="System.Runtime"><HintPath>$(AsmDir)/System.Runtime.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="SkiaSharp"><HintPath>$(AsmDir)/SkiaSharp.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>

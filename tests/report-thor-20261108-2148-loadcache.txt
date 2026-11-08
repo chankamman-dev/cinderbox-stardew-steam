@@ -1,0 +1,131 @@
+读档计时报告 2026-11-08 21:48:05
+
+== 时间线（秒，自本模组加载起）==
+    10.3  (+  10.3)  GC 965/16/16  模组加载中（本模组 Entry）
+    20.1  (+   9.8)  GC 1055/17/17  GameLaunched（所有模组 Entry 完成）
+    44.4  (+  24.3)  GC 1627/21/21  标题画面第一次画出
+   211.9  (+ 167.5)  GC 1879/22/22  读档阶段：SaveParsed
+   227.6  (+  15.6)  GC 2217/25/25  读档阶段：SaveAddedLocations
+   227.6  (+   0.1)  GC 2218/25/25  读档阶段：SaveLoadedBasicInfo
+   232.9  (+   5.3)  GC 2285/25/25  读档阶段：SaveLoadedLocations
+   233.5  (+   0.6)  GC 2293/25/25  读档阶段：Preloaded
+   233.6  (+   0.1)  GC 2296/25/25  读档阶段：Loaded
+   234.4  (+   0.9)  GC 2299/25/25  读档阶段：Ready
+   236.0  (+   1.5)  GC 2326/25/25  SaveLoaded
+   236.2  (+   0.3)  GC 2331/25/25  DayStarted（第一天开始）
+   241.4  (+   5.2)  GC 2390/26/26  进入游戏后第一帧
+   300.7  (+  59.3)  GC 2605/27/27  进入游戏一分钟
+
+== 各阶段：可缓存的文件解析 vs 修改（毫秒合计 / 次数）==
+[启动]
+  图片解码                 68 ms      82 次  文件     1.3 MB
+  图片修改                 44 ms      48 次  文件     0.0 MB
+[标题]
+  图片解码                 31 ms      32 次  文件     1.2 MB
+  图片修改                 15 ms      21 次  文件     0.0 MB
+[读档]
+  地图解析 tmx           4519 ms     224 次  文件    21.3 MB
+  图片解码               2475 ms    2424 次  文件   188.2 MB
+  图片修改               1040 ms    1556 次  文件     0.0 MB
+  地图解析 tbin           824 ms     191 次  文件     7.2 MB
+  地图修改                515 ms     118 次  文件     0.0 MB
+[进入游戏后]
+  图片解码                119 ms     157 次  文件     0.7 MB
+  图片修改                  2 ms       6 次  文件     0.0 MB
+
+== 按模组文件夹：文件解析耗时（全阶段）==
+      3308 ms  图片     986 ms/ 382 张  地图    2321 ms/ 228 张  Stardew Valley Expanded/[CP] Stardew Valley Expanded
+      1981 ms  图片     178 ms/ 127 张  地图    1804 ms/  98 张  Ridgeside Village/[CP] Ridgeside Village
+       627 ms  图片     185 ms/ 140 张  地图     442 ms/  26 张  StardewAquarium/[CP] Stardew Aquarium
+       276 ms  图片     273 ms/ 364 张  地图       3 ms/   2 张  Vibrant Pastoral/[CP] Vibrant Pastoral Redrawn
+       248 ms  图片      18 ms/  19 张  地图     229 ms/   4 张  Ornithologists Guild/[CP] Ornithologists Guild
+       219 ms  图片     219 ms/ 308 张  地图       0 ms/   0 张  [CP] Seasonal Cute Characters/assets
+       169 ms  图片      16 ms/  23 张  地图     152 ms/  15 张  [CP] Enya CatSith - A Small Expansion Mod/assets
+       156 ms  图片     156 ms/ 234 张  地图       0 ms/   0 张  [CP] Seasonal Cute Characters SVE/assets
+       139 ms  图片       2 ms/   2 张  地图     137 ms/   5 张  CentralStation/[CP] CentralStation
+       106 ms  图片     106 ms/  42 张  地图       0 ms/   0 张  Portraiture/Portraits
+        96 ms  图片       7 ms/   3 张  地图      90 ms/   3 张  [CP] Childhood Sweetheart Caroline/assets
+        77 ms  图片      20 ms/  10 张  地图      57 ms/   2 张  [Gen]NatureInTheValley/[CP]NatureInTheValley
+        68 ms  图片      53 ms/  15 张  地图      16 ms/  12 张  Affairs with Married Women/assets
+        61 ms  图片      61 ms/  90 张  地图       0 ms/   0 张  [CP] RSV Seasonal Outfits/Assets
+        55 ms  图片      55 ms/  15 张  地图       0 ms/   0 张  [CP] HxW Tilesheets/Assets
+        51 ms  图片      51 ms/  64 张  地图       0 ms/   0 张  [CP] Seasonal Outfits/assets
+        49 ms  图片      49 ms/ 100 张  地图       0 ms/   0 张  [CP] Seasonal Cute Characters Nyapu-style/assets
+        38 ms  图片      11 ms/   3 张  地图      27 ms/   4 张  MagicStardew/[CP] MagicStardew
+        33 ms  图片       3 ms/   3 张  地图      30 ms/   6 张  [CP] Adventurer's Guild Expanded for 1.6/Assets
+        30 ms  图片       2 ms/   2 张  地图      28 ms/   6 张  DwarvenExpansion/assets
+        26 ms  图片      26 ms/ 106 张  地图       0 ms/   0 张  [CP] Em's Farm Animals/assets
+        24 ms  图片      24 ms/  15 张  地图       0 ms/   0 张  [CP]Xtardew Portraits&Sprites/portraitNonNude
+        19 ms  图片      19 ms/ 413 张  地图       0 ms/   0 张  MixedBag Tilesheets/assets
+        19 ms  图片      19 ms/  15 张  地图       0 ms/   0 张  [CP] Nyapu's Portraits(1.6.9)/assets
+        18 ms  图片      18 ms/  22 张  地图       0 ms/   0 张  [CP] Seasonal Cute Characters SVE Nyapu-style/assets
+        17 ms  图片      17 ms/  12 张  地图       0 ms/   0 张  [CP] DaisyNiko's Tilesheets/assets
+        15 ms  图片      15 ms/  28 张  地图       0 ms/   0 张  MagicStardew/[C] MagicStardew
+        13 ms  图片      13 ms/  15 张  地图       0 ms/   0 张  [CP]Xtardew Portraits&Sprites/portrait
+        13 ms  图片      13 ms/  12 张  地图       0 ms/   0 张  FashionSense/Framework
+        12 ms  图片      12 ms/  15 张  地图       0 ms/   0 张  [CP]Xtardew Portraits&Sprites/spriteNonNude
+
+== 最慢的 40 个文件 ==
+     258.8 ms  地图解析 tmx      130 KB  9 层 6 图块集          [读档] Stardew Valley Expanded/[CP] Stardew Valley Expanded/assets/Maps/NewLocations/ForbiddenMaze.tmx
+     233.8 ms  地图解析 tmx      795 KB  10 层 13 图块集        [读档] Ridgeside Village/[CP] Ridgeside Village/Assets/Maps/OutdoorMaps/Custom_Ridgeside_RidgesideVillage.tmx
+     209.1 ms  地图解析 tmx      646 KB  8 层 13 图块集         [读档] Ridgeside Village/[CP] Ridgeside Village/Assets/Maps/OutdoorMaps/Custom_Ridgeside_RidgeForest.tmx
+     193.8 ms  地图解析 tmx      231 KB  10 层 11 图块集        [读档] Stardew Valley Expanded/[CP] Stardew Valley Expanded/assets/Maps/NewLocations/Highlands.tmx
+     182.3 ms  地图解析 tmx      792 KB  10 层 12 图块集        [读档] Ridgeside Village/[CP] Ridgeside Village/Assets/Maps/EventMaps/Custom_Ridgeside_RidgesideVillage_CookOff.tmx
+     176.3 ms  地图解析 tmx      899 KB  12 层 19 图块集        [读档] Ridgeside Village/[CP] Ridgeside Village/Assets/Maps/FestivalMaps/Custom_Ridgeside_RSVGathering.tmx
+     113.8 ms  地图解析 tbin    1122 KB  9 层 6 图块集          [读档] Stardew Valley Expanded/[CP] Stardew Valley Expanded/assets/Maps/NewLocations/HighlandsCavern.tbin
+     103.1 ms  地图解析 tmx       63 KB  6 层 5 图块集          [读档] Stardew Valley Expanded/[CP] Stardew Valley Expanded/assets/Maps/NewLocations/DinoIsland_North.tmx
+      97.1 ms  地图解析 tmx      212 KB  11 层 11 图块集        [读档] Stardew Valley Expanded/[CP] Stardew Valley Expanded/assets/Maps/Locations/Town.tmx
+      96.9 ms  地图解析 tmx      177 KB  10 层 4 图块集         [读档] CentralStation/[CP] CentralStation/assets/maps/centralStation.tmx
+      94.6 ms  地图解析 tmx      245 KB  13 层 14 图块集        [读档] Stardew Valley Expanded/[CP] Stardew Valley Expanded/assets/Maps/Locations/Forest.tmx
+      85.3 ms  地图解析 tmx      282 KB  9 层 6 图块集          [读档] Ridgeside Village/[CP] Ridgeside Village/Assets/Maps/QuestMaps/Custom_Ridgeside_RSVSpiritRealm.tmx
+      80.0 ms  地图解析 tmx      403 KB  9 层 5 图块集          [读档] [CP] Childhood Sweetheart Caroline/assets/Maps/eventForest.tmx
+      79.5 ms  地图解析 tbin     818 KB  12 层 10 图块集        [读档] Stardew Valley Expanded/[CP] Stardew Valley Expanded/assets/Maps/NewLocations/ForestWest.tbin
+      76.5 ms  地图解析 tmx      331 KB  9 层 14 图块集         [读档] Stardew Valley Expanded/[CP] Stardew Valley Expanded/assets/Maps/NewLocations/DinoIsland_South.tmx
+      75.0 ms  地图解析 tmx      228 KB  5 层 4 图块集          [读档] Ornithologists Guild/[CP] Ornithologists Guild/assets/map/Forest_OrnithologistsGuild.tmx
+      72.4 ms  地图解析 tmx      228 KB  5 层 4 图块集          [读档] Ornithologists Guild/[CP] Ornithologists Guild/assets/map/Forest_OrnithologistsGuild.tmx
+      72.3 ms  地图解析 tbin     625 KB  13 层 8 图块集         [读档] Stardew Valley Expanded/[CP] Stardew Valley Expanded/assets/Maps/NewLocations/CrimsonBadlands.tbin
+      68.7 ms  地图解析 tmx      228 KB  5 层 4 图块集          [读档] Ornithologists Guild/[CP] Ornithologists Guild/assets/map/Forest_OrnithologistsGuild.tmx
+      65.6 ms  地图解析 tmx      186 KB  8 层 9 图块集          [读档] Ridgeside Village/[CP] Ridgeside Village/Assets/Maps/OutdoorMaps/Custom_Ridgeside_RSVTheHike.tmx
+      62.7 ms  地图解析 tmx      310 KB  12 层 9 图块集         [读档] Stardew Valley Expanded/[CP] Stardew Valley Expanded/assets/Maps/Locations/Woods2.tmx
+      60.1 ms  地图解析 tmx      128 KB  11 层 10 图块集        [读档] Stardew Valley Expanded/[CP] Stardew Valley Expanded/assets/Maps/NewLocations/GrampletonSuburbsOutskirts.tmx
+      57.8 ms  图片解码          612 KB  2496x2496          [读档] Stardew Valley Expanded/[CP] Stardew Valley Expanded/assets/Tilesheets/HighlandsCavern_ShadowTilesheet.png
+      56.0 ms  地图解析 tmx      144 KB  5 层 4 图块集          [读档] StardewAquarium/[CP] Stardew Aquarium/assets/Maps/Slimejack.tmx
+      54.6 ms  地图解析 tmx       16 KB  7 层 4 图块集          [读档] Stardew Valley Expanded/[CP] Stardew Valley Expanded/assets/Maps/NewLocations/HenchmanBackyard.tmx
+      54.5 ms  图片解码         1316 KB  2496x2496          [读档] Stardew Valley Expanded/[CP] Stardew Valley Expanded/assets/Tilesheets/HighlandsCavern_LightingTilesheet.png
+      53.1 ms  地图解析 tmx      176 KB  6 层 6 图块集          [读档] StardewAquarium/[CP] Stardew Aquarium/assets/Maps/MNFSewer.tmx
+      52.0 ms  地图解析 tmx      186 KB  7 层 10 图块集         [读档] Ridgeside Village/[CP] Ridgeside Village/Assets/Maps/OutdoorMaps/Custom_Ridgeside_SummitFarm.tmx
+      50.6 ms  图片解码         1500 KB  2496x2496          [读档] Stardew Valley Expanded/[CP] Stardew Valley Expanded/assets/Tilesheets/ForbiddenMaze_Shadow.png
+      49.2 ms  图片解码          460 KB  2400x3600          [读档] Stardew Valley Expanded/[CP] Stardew Valley Expanded/assets/Tilesheets/z_CastleVillage.png
+      47.6 ms  地图解析 tmx      176 KB  6 层 6 图块集          [读档] StardewAquarium/[CP] Stardew Aquarium/assets/Maps/MNFSewer.tmx
+      44.3 ms  图片解码         1137 KB  2496x2496          [读档] Stardew Valley Expanded/[CP] Stardew Valley Expanded/assets/Tilesheets/ForestWest_Shadow.png
+      44.0 ms  地图解析 tmx      223 KB  9 层 8 图块集          [读档] Stardew Valley Expanded/[CP] Stardew Valley Expanded/assets/Maps/NewLocations/FableReef.tmx
+      43.2 ms  图片解码          515 KB  2496x2496          [读档] Stardew Valley Expanded/[CP] Stardew Valley Expanded/assets/Tilesheets/HighlandsCavern_OreTilesheet.png
+      41.2 ms  地图解析 tmx      173 KB  9 层 8 图块集          [读档] Ridgeside Village/[CP] Ridgeside Village/Assets/Maps/FestivalMaps/Custom_Ridgeside_EmberNight.tmx
+      40.3 ms  地图解析 tmx      718 KB  6 层 11 图块集         [读档] StardewAquarium/[CP] Stardew Aquarium/assets/Maps/ExteriorMuseum_Spring.tmx
+      39.6 ms  地图解析 tmx      148 KB  8 层 7 图块集          [读档] Ridgeside Village/[CP] Ridgeside Village/Assets/Maps/OutdoorMaps/Custom_Ridgeside_RidgeFalls.tmx
+      38.4 ms  地图解析 tmx      714 KB  6 层 11 图块集         [读档] StardewAquarium/[CP] Stardew Aquarium/assets/Maps/ExteriorMuseum_Fall.tmx
+      37.1 ms  地图解析 tmx       49 KB  8 层 6 图块集          [读档] Stardew Valley Expanded/[CP] Stardew Valley Expanded/assets/Maps/NewLocations/GrampletonCoast.tmx
+      36.9 ms  地图解析 tmx      111 KB  13 层 8 图块集         [读档] Stardew Valley Expanded/[CP] Stardew Valley Expanded/assets/Maps/NewLocations/SpriteSpring2.tmx
+
+== 地图：每 KB 耗时（估算转 TBIN 的收益）==
+  地图解析 tmx       224 次      21764 KB      4519 ms    0.21 ms/KB
+  地图解析 tbin      191 次       7368 KB       824 ms    0.11 ms/KB
+
+== 重复解析（同一文件解析多次）==
+  3 次       216 ms  Ornithologists Guild/[CP] Ornithologists Guild/assets/map/Forest_OrnithologistsGuild.tmx
+  2 次       133 ms  CentralStation/[CP] CentralStation/assets/maps/centralStation.tmx
+  2 次       101 ms  StardewAquarium/[CP] Stardew Aquarium/assets/Maps/MNFSewer.tmx
+  2 次        60 ms  Ridgeside Village/[CP] Ridgeside Village/Assets/Maps/OutdoorMaps/Custom_Ridgeside_RSVCliff.tmx
+  2 次        58 ms  Stardew Valley Expanded/[CP] Stardew Valley Expanded/assets/Tilesheets/HighlandsCavern_ShadowTilesheet.png
+  2 次        54 ms  Stardew Valley Expanded/[CP] Stardew Valley Expanded/assets/Tilesheets/HighlandsCavern_LightingTilesheet.png
+  2 次        51 ms  Stardew Valley Expanded/[CP] Stardew Valley Expanded/assets/Tilesheets/ForbiddenMaze_Shadow.png
+  2 次        49 ms  Stardew Valley Expanded/[CP] Stardew Valley Expanded/assets/Tilesheets/z_CastleVillage.png
+  2 次        44 ms  Stardew Valley Expanded/[CP] Stardew Valley Expanded/assets/Tilesheets/ForestWest_Shadow.png
+  2 次        43 ms  Stardew Valley Expanded/[CP] Stardew Valley Expanded/assets/Tilesheets/HighlandsCavern_OreTilesheet.png
+  2 次        40 ms  Ridgeside Village/[CP] Ridgeside Village/Assets/Maps/EventMaps/Custom_Ridgeside_RSVTheRide.tmx
+  3 次        40 ms  Stardew Valley Expanded/[CP] Stardew Valley Expanded/assets/Tilesheets/fall_z_extras.png
+  30 次        36 ms  [CP] Seasonal Cute Characters/assets/Other/HideNoses/False/LooseSprites/Cursors_Fall.png
+  34 次        33 ms  [CP] Seasonal Cute Characters SVE/assets/true/Maps/Cursors_Fall.png
+  2 次        28 ms  Stardew Valley Expanded/[CP] Stardew Valley Expanded/assets/Tilesheets/z_Island_W_CoralReefs.png
+
+各模组慢事件见 SMAPI 日志里 "exceeds the 100ms warning threshold" 的行。

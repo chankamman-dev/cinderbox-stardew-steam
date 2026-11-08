@@ -1,0 +1,17 @@
+<Project>
+  <!--
+    Where the build finds the game and the Cinderbox assemblies. Set them in local.props (copy
+    local.props.example; it is git-ignored) or as environment variables:
+      GamePath  / STARDEW_GAME_PATH   - an owned PC copy of Stardew Valley 1.6.15 with SMAPI installed
+      AsmDir    / CINDERBOX_ASM_DIR   - assemblies extracted from Cinderbox's APK (tools/extract_store.py)
+  -->
+  <Import Project="$(MSBuildThisFileDirectory)local.props" Condition="Exists('$(MSBuildThisFileDirectory)local.props')" />
+  <PropertyGroup>
+    <GamePath Condition="'$(GamePath)'==''">$(STARDEW_GAME_PATH)</GamePath>
+    <AsmDir Condition="'$(AsmDir)'==''">$(CINDERBOX_ASM_DIR)</AsmDir>
+  </PropertyGroup>
+  <Target Name="RequireLocalPaths" BeforeTargets="ResolveAssemblyReferences">
+    <Error Condition="'$(GamePath)'=='' and Exists('$(MSBuildProjectDirectory)/manifest.json')" Text="GamePath is not set: copy local.props.example to local.props, or set STARDEW_GAME_PATH." />
+    <Error Condition="'$(AsmDir)'=='' and $(MSBuildProjectName.EndsWith('.Core'))" Text="AsmDir is not set: copy local.props.example to local.props, or set CINDERBOX_ASM_DIR." />
+  </Target>
+</Project>

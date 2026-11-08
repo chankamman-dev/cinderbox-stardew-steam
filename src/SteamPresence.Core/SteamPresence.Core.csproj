@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!--
+    Compiled against the .NET 10 assemblies taken out of Cinderbox's own assembly store (no .NET 10
+    SDK here, and Cinderbox's SteamKit2 targets net10.0). What compiles against them is what the
+    phone has at run time. AsmDir = output of tools/extract_store.py.
+  -->
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <NoStdLib>true</NoStdLib>
+    <NoCompilerStandardLib>true</NoCompilerStandardLib>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>12</LangVersion>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Private.CoreLib"><HintPath>$(AsmDir)/System.Private.CoreLib.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="System.Runtime"><HintPath>$(AsmDir)/System.Runtime.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="System.Threading"><HintPath>$(AsmDir)/System.Threading.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="System.Threading.Thread"><HintPath>$(AsmDir)/System.Threading.Thread.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="System.Net.Http"><HintPath>$(AsmDir)/System.Net.Http.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="System.Net.Primitives"><HintPath>$(AsmDir)/System.Net.Primitives.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="System.Collections"><HintPath>$(AsmDir)/System.Collections.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="System.Private.Uri"><HintPath>$(AsmDir)/System.Private.Uri.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="System.Text.Json"><HintPath>$(AsmDir)/System.Text.Json.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="System.Linq"><HintPath>$(AsmDir)/System.Linq.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Mono.Android"><HintPath>$(AsmDir)/Mono.Android.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Java.Interop"><HintPath>$(AsmDir)/Java.Interop.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="SteamKit2"><HintPath>$(AsmDir)/SteamKit2.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="protobuf-net.Core"><HintPath>$(AsmDir)/protobuf-net.Core.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>

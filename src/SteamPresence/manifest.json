@@ -1,0 +1,10 @@
+{
+  "Name": "Steam 在线（Cinderbox）",
+  "Author": "chankamman-dev",
+  "Version": "0.3.1",
+  "Description": "在 Cinderbox 里玩星露谷时，Steam 好友列表显示正在玩 Stardew Valley，累计游戏时长，解锁 Steam 成就并弹出提示。使用 Cinderbox 里登录的 Steam 账号，没有时在游戏里扫码登录一次。",
+  "UniqueID": "chankamman.CinderboxSteamPresence",
+  "EntryDll": "SteamPresence.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

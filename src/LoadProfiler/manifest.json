@@ -1,0 +1,10 @@
+{
+  "Name": "读档计时（LoadProfiler）",
+  "Author": "chankamman-dev",
+  "Version": "0.1.0",
+  "Description": "只计时、不改任何东西：记录启动和读档时模组文件解析、图片/地图修改、各模组事件的耗时，进入游戏一分钟后写出报告。用完删掉即可。",
+  "UniqueID": "chankamman.LoadProfiler",
+  "EntryDll": "LoadProfiler.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

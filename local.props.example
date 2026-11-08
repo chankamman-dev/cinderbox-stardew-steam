@@ -1,0 +1,9 @@
+<Project>
+  <!-- Copy to local.props and fill in. local.props is git-ignored. -->
+  <PropertyGroup>
+    <!-- Your own PC install of Stardew Valley 1.6.15 with SMAPI (has Stardew Valley.dll, StardewModdingAPI.dll, smapi-internal/). -->
+    <GamePath>D:/Games/Stardew Valley</GamePath>
+    <!-- Output of: python -I tools/extract_store.py lib/arm64-v8a/libassembly-store.so <this dir> -->
+    <AsmDir>D:/cinderbox-asm</AsmDir>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,14 @@
+# build output
+bin/
+obj/
+out/
+*.user
+
+# test scratch (generated QR images / matrices)
+tests/out*/
+
+# machine-specific
+tools/local.env
+
+# local build settings (copy local.props.example)
+local.props

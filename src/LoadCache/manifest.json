@@ -1,0 +1,10 @@
+{
+  "Name": "读档加速（LoadCache）",
+  "Author": "chankamman-dev",
+  "Version": "0.1.1",
+  "Description": "加快 Cinderbox 里星露谷的读档：读档期间不重复解码同一张图、PNG 直接解成游戏像素格式、TMX 地图缓存为校验过的二进制。不改变加载的内容，删掉即恢复。",
+  "UniqueID": "chankamman.LoadCache",
+  "EntryDll": "LoadCache.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}
